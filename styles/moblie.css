@@ -1,0 +1,99 @@
+@media only screen and (max-width: 780px){
+
+  .main-nav-container img{
+  width: 100%;
+  border-radius: 0;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, .3);
+  margin-bottom: 5px;
+  }
+
+.main-nav-container{
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+
+}
+
+.patient-card{
+  background-size: cover;
+  width: 90%;
+  margin: auto;
+  position: relative;
+}
+
+.patient-container {
+  width: 90%;
+}
+.clearfix{
+  clear: none;
+}
+
+
+
+
+  .main-background{
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  margin-top: -10%;
+  box-shadow: -5px 10px 10px rgba(0, 0, 0, .5);
+  border-bottom-right-radius: 65% 45%;
+  opacity: .9;
+
+
+  }
+
+
+  .background-frame{
+  background-color: #9439BC;
+  padding-bottom: 5%;
+  z-index: -1;
+  }
+
+  .hospital-frame{
+  background-color: #ff4747;
+
+  }
+
+#full{
+
+display: flex;
+flex-direction: column;
+
+}
+
+li i{
+margin-bottom: 5%;
+width: 20%;
+height: 20%;
+}
+
+.care{
+  font-size: 18px;
+}
+
+
+#modal-toggle:checked ~ .modal-backdrop {
+  opacity: 0;
+   }
+.modal-content {
+  top: 0;
+  left: 0;
+  height: 60vh;
+  width: 80vw;
+}
+
+
+.modal-btn {
+	 padding: 1px;
+	 color: #92909b;
+	 font-size: 18px;
+	 font-weight: bold;
+	 outline: solid #5a5960 2px;
+	 cursor: pointer;
+   position: fixed;
+   top: 4%;
+   left: 2%;
+}
+
+}

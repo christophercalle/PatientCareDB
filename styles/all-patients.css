@@ -1,0 +1,24 @@
+html {
+    margin: 5% 15% 5% 15%;
+    font-family: serif;
+    font-size: 120%;
+    font-weight: bold;
+}
+
+input {
+    margin-left: 3%;
+}
+
+
+#body, form, html {
+    background: rgb(210,180,255);
+    background: radial-gradient(circle, rgba(210,180,255,1) 12%, rgba(125,139,238,1) 83%);
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+
+

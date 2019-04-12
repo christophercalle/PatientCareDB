@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <title>Home - {{username}}</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link rel="stylesheet" href='/styles/main.css'/>
+
+        <link rel="stylesheet" media='screen and (min-width: 200px) and (max-width: 780px)' href='/styles/moblie.css' />
+
+        <link rel="stylesheet" href="https://www.koolchart.com/demo/KoolChart/Assets/Css/KoolChart.css"/>
+        <link rel="stylesheet" href="https://www.koolchart.com/demo/Samples/Web/sample.css"/>
+    </head>
+
+	<body class="main-nav-background overflowfix">
+		<header class="dashboard">&nbsp;&nbsp;&nbsp;PatientCareDB</header>
+
+		<section class="flex">
+			<div class="main-nav-container">
+				<p><a href="/{{hospitalname}}/{{hospitalid}}/{{username}}/{{employeeid}}/new-patient"><img src="/styles/new_patient2.jpg" alt="new patient"></a></p>
+
+				<p><a href="/{{hospitalname}}/{{hospitalid}}/{{username}}/{{employeeid}}/all-patients"><img src="/styles/treatment2.jpg" alt="treatments"></a></p>
+			</div>
+
+			<div class="patient-card overflowfix">
+				<div class="date-container">
+					<div class="date" id="printDay"></div>
+
+					<div class="date" id="printDate"></div>
+
+					<div class="date" id="printTime"></div>
+				</div>
+
+				<div class="patient-columns">
+					{{#patients}}
+						<div class="patient-container">
+							{{lastname}}, {{firstname}}
+						</div>
+					{{/patients}}
+				</div>
+			</div>
+		</section>
+    <div id="chartHolder" style="height:700px; width:100%;"></div>
+    <div id="full"></div>
+
+	</body>
+
+    <script src="/scripts/home.js"></script>
+    <script src="https://www.koolchart.com/demo/LicenseKey/codepen/KoolChartLicense.js"></script>
+    <script src="https://www.koolchart.com/demo/KoolChart/JS/KoolIntegration.js"></script>
+    <script src="/scripts/graph.js"></script>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <title>Index</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" href="/styles/main.css" />
+        <link rel="stylesheet" media='screen and (min-width: 200px) and (max-width: 780px)' href='/styles/moblie.css' />
+          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    </head>
+
+    <body>
+
+
+      <div class="background-frame hospital-frame">
+      <img class="main-background hospital-background"  src="/styles/hospital-home.jpg" alt="main image">
+      </div>
+
+      <label class="modal-btn" for="modal-toggle">Start Here</label>
+
+        <input id="modal-toggle" type="checkbox">
+        <label class="modal-backdrop" for="modal-toggle"></label>
+        <div class="modal-content">
+            <label class="modal-close-btn" for="modal-toggle">
+                  <svg width="50" height="50">
+                <line x1="10" y1="10" x2="40" y2="40"/>
+                    <line x1="40" y1="10" x2="10" y2="40"/>
+                  </svg>
+              </label>
+            <div class="tabs">
+      <!--  LOG IN  -->
+                <input class="radio" id="tab-1" name="tabs-name" type="radio" checked>
+                <label for="tab-1" class="table"><span>Login</span></label>
+                <div class="tabs-content">
+                  <form action="/{{hospital.hospitalname}}/{{hospital.hospitalid}}/log-in-employee" method="POST">
+                      <label class="credential-label">Log In:</label>
+
+                      <input class="credential-input" type="text" name="username" placeholder="Username (use'steve' for demo)" autofocus required />
+
+                      <input class="credential-input" type="password" name="password" placeholder="Password (use 'password' for demo" required />
+
+                      <input type="submit" value="Log In" />
+
+                      {{employeeExistsFalse}}
+                  </form>
+                   <form class="forgot-password" action="">
+                       <input id="forgot-password-toggle" type="checkbox">
+                       <label for="forgot-password-toggle">forgot password?</label>
+                       <div class="forgot-password-content">
+                           <input type="email" placeholder="enter your email" required>
+                           <input type="submit" value="go">
+                       </div>
+                   </form>
+                </div>
+      <!--  SIGN UP  -->
+                <input class="radio" id="tab-2" name="tabs-name" type="radio">
+                <label for="tab-2" class="table"><span>Sign up</span></label>
+                <div class="tabs-content">
+                  <form action="/register-hospital" method="POST">
+
+                      <input type="text" name="username" placeholder=" Username" required />
+
+                      <input type="password" name="password" placeholder="Password" required /><br />
+
+                      <input type="text" name="address" placeholder="Address" required />
+
+                      <input type="text" name="city" placeholder="City" required />
+
+                      <input type="text" name="state" placeholder="State" required />
+
+                      <input type="number" name="zipcode" min="10000" max="99999" placeholder="Zipcode" required />
+
+                      <input type="tel" name="telephone" placeholder="555-555-5555" required />
+
+                      <input type="submit" value="Register" />
+
+                      <input type="reset" />
+                  </form>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="hospital-cards">
+                   <section class="card">
+                       <header>
+                           <img src="/styles/h-image-1.jpg">
+                       </header>
+
+                       <center><h4 id="card-title">MORE EXPERIENCE</h4></center>
+
+                       <p class="paragraph">We treat more than a million people every year. Our highly specialized staff are experienced in treating rare and complex conditions. With our nursing staff now using PatientCareDB, we project to treat even more patients.</p>
+
+                       <button><b>Learn More</b></button>
+                   </section>
+
+                   <section class="card card--big">
+                       <header>
+                           <img src="/styles/h-image-4.jpg">
+                       </header>
+
+                       <center><h4 id="card-title">FAMILY</h4></center>
+
+                       <p class="paragraph">We are proud to consistently be recognized as a leader in pediatric care, and are honored to be home to the best place in the country for pediatric cardiology and heart surgery thanks to our staff using PatientCareDb.</p>
+
+                       <button><b>Learn More</b></button>
+                   </section>
+
+                   <section class="card card--big">
+                       <header>
+                           <img src="/styles/h-image-2.jpg">
+                       </header>
+
+                       <center><h4 id="card-title">RANKED #1</h4></center>
+
+                       <p class="paragraph"> In the U.S. News & World Report rankings of top medical inovations, PatientCareDb is the No.1
+                       medical application 5 years in a row. Hospitals using PatientCareDb consistantly outperform 98% of all other hospitals. </p>
+
+                       <button><b>Learn More</b></button>
+                   </section>
+
+                   <section class="card">
+                       <header>
+                           <img src="/styles/h-image-3.jpg">
+                       </header>
+
+                       <center><h4 id="card-title">EXPERTISE</h4></center>
+
+                       <p class="paragraph">The world's experienced developers in the medical industry were brought together specifically for one reason. PatientCareDB not only saves hospitals and patients money, but most importantly, it saves lives. </p>
+
+                       <button><b>Learn More</b></button>
+                   </section>
+               </div>
+
+
+      <div class="footer">
+        <div id="footer-button"></div>
+      <div id="footer-container">
+      <div id="cont">
+      <div class="footer_center">
+        <ul id="full"class="social-media">
+          <li><a href="#"><i class="fab fa-facebook-f fa-1x"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter fa-1x"></i></a></li>
+          <li><a href="#"><i class="fab fa-linkedin-in fa-1x"></i></a></li>
+          <li><a href="#"><i class="fab fa-youtube fa-1x"></i></a></li>
+        </ul>
+      </div>
+      </div>
+      </div>
+      </div>
+
+    </body>
+
+    <script src=""></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
+</html>

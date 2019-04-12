@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <title>Index</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link rel="stylesheet" type="text/css" href="../styles/main.css" />
+
+        <link rel="stylesheet" media='screen and (min-width: 200px) and (max-width: 780px)' href='../styles/moblie.css' />
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <div class="background-frame">
+            <img class="main-background"  src="styles/desktop.jpg" alt="main image">
+        </div>
+
+        <label class="modal-btn" for="modal-toggle">Start Here</label>
+
+        <input id="modal-toggle" type="checkbox">
+
+        <label class="modal-backdrop" for="modal-toggle"></label>
+
+        <div class="modal-content">
+            <label class="modal-close-btn" for="modal-toggle">
+                <svg width="50" height="50">
+                    <line x1="10" y1="10" x2="40" y2="40"/>
+
+                    <line x1="40" y1="10" x2="10" y2="40"/>
+                </svg>
+            </label>
+
+            <div class="tabs">
+<!--  LOG IN  -->
+                <input class="radio" id="tab-1" name="tabs-name" type="radio" checked>
+
+                <label for="tab-1" class="table"><span>Login</span></label>
+
+                <div class="tabs-content">
+                    <form action="/log-in-hospital" method="POST">
+                        <input type="text" name="hospitalname" placeholder="Hospital (use 'Patient Care Hospital' for demo)" required>
+
+                        <input type="password" name="accesscode" placeholder="Password (use 'password' for demo)" required>
+
+                        <input type="submit" value="Log In">
+                    </form>
+
+                    <form class="forgot-password" action="">
+                        <input id="forgot-password-toggle" type="checkbox">
+
+                        <label for="forgot-password-toggle">forgot password?</label>
+
+                        <div class="forgot-password-content">
+                            <input type="email" placeholder="enter your email" required>
+
+                            <input type="submit" value="go">
+                        </div>
+                    </form>
+                </div>
+<!--  SIGN UP  -->
+                <input class="radio" id="tab-2" name="tabs-name" type="radio">
+
+                <label for="tab-2" class="table"><span>Sign up</span></label>
+
+                <div class="tabs-content">
+                    <form action="/register-hospital" method="POST">
+
+                        <input type="text" name="username" placeholder="Hospital Name" required />
+
+                        <input type="password" name="password" placeholder="Password" required /><br />
+
+                        <input type="text" name="address" placeholder="Address" required />
+
+                        <input type="text" name="city" placeholder="City" required />
+
+                        <input type="text" name="state" placeholder="State" required />
+
+                        <input type="number" name="zipcode" min="10000" max="99999" placeholder="Zipcode" required />
+
+                        <input type="tel" name="telephone" placeholder="555-555-5555" required />
+
+                        <input type="submit" value="Register" />
+
+                        <input type="reset" />
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <a data-scroll href="#full"><div class="arrow"></div></a>
+        </div>
+
+        <h1 class="care"><u>Combining quality healthcare and technology</u></h1>
+
+        <ul id="full" class="symbols">
+            <li><i class="fas fa-user-md fa-5x"></i><div><u>Leading Experts</u></div></li>
+
+            <li><i class="fas fa-heartbeat fa-5x"></i><div><u>General Treatment</u></div></li>
+
+            <li><i class="fas fa-ambulance fa-5x"></i><div><u>Emergency Care</u></div></li>
+        </ul>
+    </body>
+
+    <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+</html>
